@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MoodAnalyserTest {
+class refactortest1 {
     @Test
     public void moodchecksad(){
         MoodAnalyser mood = new MoodAnalyser("I am in sad mood ");
