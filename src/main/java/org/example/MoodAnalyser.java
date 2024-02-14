@@ -1,7 +1,14 @@
 package org.example;
 
 public class MoodAnalyser {
+
     private String message;
+    class MoodAnalysisException extends Exception{
+        MoodAnalysisException(String message) {
+
+        }
+
+    }
 
     public MoodAnalyser() {
         this.message ="";
@@ -16,11 +23,11 @@ public class MoodAnalyser {
     public String analyseMood() {
         try {
             if (message == null) {
-                throw new NullPointerException("message cannot be null");
+                throw new MoodAnalysisException ("message cannot be null");
             }
             }
-            catch (NullPointerException e) {
-                return "HAPPY";
+            catch (MoodAnalysisException e) {
+                return "MoodAnalysisException";
             }
             if (message.contains("sad")) {
                 return "SAD";
@@ -31,5 +38,6 @@ public class MoodAnalyser {
 
 return "";
     }
+
 
 }

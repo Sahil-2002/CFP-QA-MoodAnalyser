@@ -24,7 +24,7 @@ class MoodAnalyserTest2 {
     public void moodchecknull(){
         MoodAnalyser mood = new MoodAnalyser(null);
         String result = mood.analyseMood();
-        Assertions.assertEquals("HAPPY",result);
+        Assertions.assertEquals("MoodAnalysisException",result);
 
     }
 
