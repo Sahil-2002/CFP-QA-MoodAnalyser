@@ -22,9 +22,9 @@ class MoodAnalyserTest2 {
         }
         @Test
     public void moodchecknull(){
-        MoodAnalyser mood = new MoodAnalyser(null);
+        MoodAnalyser mood = new MoodAnalyser();
         String result = mood.analyseMood();
-        Assertions.assertEquals("MoodAnalysisException",result);
+        Assertions.assertEquals("MoodAnalysisExceptionorg.example.MoodAnalyser$MoodAnalysisException: Empty Mood", result);
 
     }
 
